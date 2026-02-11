@@ -29,8 +29,6 @@ vpa:
   enabled: true
   updateMode: "Auto"
 
-resources: {}
-
 ingress:
   enabled: false
   annotations: {}
@@ -43,11 +41,9 @@ autoscaling:
 podLabels: {}
 podAnnotations: {}
 
-# Fix ServiceAccount template
 serviceAccount:
   create: true
   name: ""
 
-# Fix httproute template
 httpRoute:
   enabled: false
