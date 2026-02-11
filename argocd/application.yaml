@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: 
+    repoURL: https://github.com/ketan02-git/node-hpa-vpa-demo.git
     targetRevision: main
     path: helm/node-app
     helm:
