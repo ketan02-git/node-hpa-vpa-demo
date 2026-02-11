@@ -29,6 +29,25 @@ vpa:
   enabled: true
   updateMode: "Auto"
 
+resources: {}
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts: []
+  tls: []
+
+autoscaling:
+  enabled: false
+
+podLabels: {}
+podAnnotations: {}
+
+# Fix ServiceAccount template
 serviceAccount:
   create: true
   name: ""
+
+# Fix httproute template
+httpRoute:
+  enabled: false
