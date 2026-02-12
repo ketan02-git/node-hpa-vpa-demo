@@ -29,9 +29,12 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     # 4️⃣ Build Docker Image
-    - name: Build Docker image
-      run: |
-        docker build -t cloudketan/nodejs-hpa-vpa:hv1 .
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: cloudketan/nodejs-hpa-vpa:hv1
 
     # 5️⃣ Push Docker Image
     - name: Push Docker image
