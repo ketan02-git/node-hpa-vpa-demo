@@ -9,3 +9,6 @@ sudo apt install apache2-utils
 ab -n 10000 -c 100 http://<EC2-IP>:30007/
 watch kubectl get pods
 
+# for vpa
+kubectl apply -f https://github.com/kubernetes/autoscaler/releases/latest/download/vertical-pod-autoscaler.yaml
+kubectl get pods -n kube-system | grep vpa
